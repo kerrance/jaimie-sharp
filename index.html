@@ -12,7 +12,10 @@
     html,
     body,
     h1,
-    p {
+    p,
+    header,
+    section,
+    footer {
       margin: 0;
       padding: 0;
     }
@@ -23,29 +26,28 @@
       letter-spacing: -0.02rem;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      position: relative;
       height: 100vh;
+    }
+
+    header, footer, section {
+      padding: 0 1.2rem;
     }
 
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding-right: 20px;
-      padding-left: 20px;
     }
 
     footer {
-      position: absolute;
-      right: 0;
-      bottom: 20px;
-      left: 0;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
     }
 
     h1 {
       font-size: 3rem;
       letter-spacing: -0.1rem;
-      margin-bottom: 0.4rem;
+      margin: 0.6rem 0;
     }
 
     p {
@@ -124,7 +126,7 @@
 </head>
 
 <body>
-  <section>
+  <header>
     <div class="container">
       <h1>Jaimie Sharp</h1>
 
@@ -163,6 +165,7 @@
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
       Copyright &copy; 2020 Jaimie Sharp.
