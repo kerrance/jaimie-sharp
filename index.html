@@ -26,11 +26,6 @@
       letter-spacing: -0.02rem;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      height: 100vh;
-    }
-
-    header, footer, section {
-      padding: 0 1.2rem;
     }
 
     .container {
@@ -39,19 +34,20 @@
       margin: 0 auto;
     }
 
+    header,
+    section,
     footer {
-      padding-top: 1.2rem;
-      padding-bottom: 1.2rem;
+      padding: 1.2rem;
+    }
+
+    h1,
+    p {
+      margin-bottom: 0.6rem;
     }
 
     h1 {
       font-size: 3rem;
       letter-spacing: -0.1rem;
-      margin: 0.6rem 0;
-    }
-
-    p {
-      margin-bottom: 0.6rem;
     }
 
     p:last-of-type {
@@ -70,9 +66,10 @@
     }
 
     .column {
-      flex: 23%;
-      max-width: 23%;
-      padding: 0 1%;
+      flex: calc(25% - 1.2rem);
+      max-width: calc(25% - 1.2rem);
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
     }
 
     .column img {
@@ -95,6 +92,10 @@
       .column:last-of-type {
         padding-right: 0;
       }
+
+      .column img:first-of-type {
+        margin-top: 0;
+      }
     }
 
     @media screen and (max-width: 767px) {
@@ -103,8 +104,8 @@
       }
 
       .column {
-        flex: 48%;
-        max-width: 48%;
+        flex: calc(50% - 0.6rem);
+        max-width: calc(50% - 0.6rem);
       }
 
       .column:nth-of-type(odd) {
@@ -119,6 +120,11 @@
     @media screen and (max-width: 479px) {
       .container {
         max-width: 479px;
+      }
+
+      header,
+      section {
+        padding-bottom: 0;
       }
 
       .column {
