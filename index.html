@@ -56,9 +56,36 @@
       margin-bottom: 0;
     }
 
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 23%;
+      max-width: 23%;
+      padding: 0 1%;
+    }
+
+    .column img {
+      margin-top: 1.2rem;
+      vertical-align: middle;
+      width: 100%;
+    }
+
     @media screen and (max-width: 991px) {
       .container {
         max-width: 991px;
+      }
+    }
+
+    @media screen and (min-width: 767px) {
+      .column:first-of-type {
+        padding-left: 0;
+      }
+
+      .column:last-of-type {
+        padding-right: 0;
       }
     }
 
@@ -66,11 +93,31 @@
       .container {
         max-width: 767px;
       }
+
+      .column {
+        flex: 48%;
+        max-width: 48%;
+      }
+
+      .column:nth-of-type(odd) {
+        padding-left: 0;
+      }
+
+      .column:nth-of-type(even) {
+        padding-right: 0;
+      }
     }
 
     @media screen and (max-width: 479px) {
       .container {
         max-width: 479px;
+      }
+
+      .column {
+        flex: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   </style>
@@ -82,6 +129,38 @@
       <h1>Jaimie Sharp</h1>
 
       <p>For any enquiries, please email <strong>sharp.kerri@gmail.com</strong></p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img src="images/autumnleaves.jpg" />
+          <img src="images/autumntree.jpg" />
+          <img src="images/blueboat.jpg" />
+          <img src="images/brightonpavillion.jpg" />
+          <img src="images/fireyflowers.jpg" />
+        </div>
+        <div class="column">
+          <img src="images/george.jpg" />
+          <img src="images/hovelagoon.jpg" />
+          <img src="images/marineparade.jpg" />
+          <img src="images/naughtycats.jpg" />
+          <img src="images/peskypoodle.jpg" />
+        </div>
+        <div class="column">
+          <img src="images/purplecats.jpg" />
+          <img src="images/seafrontpigeons.jpg" />
+          <img src="images/springcats.jpg" />
+          <img src="images/tabbycat.jpg" />
+        </div>
+        <div class="column">
+          <img src="images/town.jpg" />
+          <img src="images/villageview.jpg" />
+          <img src="images/westpier.jpg" />
+          <img src="images/yellowbeachhut.jpg" />
+      </div>
     </div>
   </section>
   <footer>
